@@ -1,5 +1,5 @@
-# man(1)				 junk man page				man(1)
-
+Man page readme for a bash script that moves files to a junk folder. 
+The watch.sh is a seperate script that watched for files being moved to a from the junk folder
 
 
 # NAME
@@ -69,6 +69,3 @@
        Written	by  Daryl  McAllister  (dmcall200@caledonia.ac.uk)  1/10/17  -
        30/10/17: Free Usage.
 
-
-
-# 1.0				  20/10/2017				man(1)
