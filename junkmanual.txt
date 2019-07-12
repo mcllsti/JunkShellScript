@@ -17,7 +17,7 @@ DESCRIPTION
 
        Junk  can  be  given a command line option to run a function or if sup-
        plied without a command line option or file to junk then it will run an
-       menu to allow a user to interactivley choose an option.
+       menu to allow a user to interactively choose an option.
 
 OPTIONS
        -l     Displays	a list of the contents of the Junk directory with file
