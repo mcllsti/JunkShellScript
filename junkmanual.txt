@@ -9,7 +9,7 @@ SYNOPSIS
        junk [OPTION]... [FILENAME]
 
 DESCRIPTION
-       Junk is a program that will move a specified file to the Junk Directory
+       Junk is a shell program that will move a specified file to the Junk Directory
        or perform other functions on the Junk directory. If  there  is	not  a
        Junk directory then the program will create one for the user.
 
