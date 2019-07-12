@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
 				powershell label: '', script: 'help get-help -examples'
+				powershell label: '', script: 'help get-services -examples'
             }
         }
         stage('Deploy') {
