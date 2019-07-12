@@ -3,7 +3,7 @@ man(1)				 junk man page				man(1)
 
 
 NAME
-       junk - moves files to a junk folder
+       junk - moves files to a separate junk folder
 
 SYNOPSIS
        junk [OPTION]... [FILENAME]
