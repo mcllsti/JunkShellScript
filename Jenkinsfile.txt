@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                mail bcc: '', body: 'Test email sent from Jenkins.', cc: '', from: '', replyTo: '', subject: 'Test Jenkins Email', to: 'daryl.mcallister@cashfac.com'
+				powershell label: '', script: 'help get-help -examples'
             }
         }
         stage('Deploy') {
