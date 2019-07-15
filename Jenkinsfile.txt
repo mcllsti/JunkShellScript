@@ -27,8 +27,6 @@ pipeline {
         }
 		
 		stage('Deploy') {
-						try {
-
             steps {
                 echo '------------'
                 echo 'Deploying...'
