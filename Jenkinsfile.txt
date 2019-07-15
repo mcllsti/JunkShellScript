@@ -31,6 +31,7 @@ pipeline {
                 echo '------------'
                 echo 'Deploying...'
 				echo '------------'
+				mail bcc: '', body: 'The latest build on Jenkins has successfully deployed. ', cc: '', from: 'JenkinsCI', replyTo: '', subject: 'Jenkins: Sucessful Deployment', to: 'daryl.mcallister@cashfac.com'
             }
         }
     }
