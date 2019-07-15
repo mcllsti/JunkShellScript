@@ -37,7 +37,9 @@ pipeline {
  
     post{
         success{
-            archiveArtifacts artifacts: 'Builds\\NANTScripts\\Target.zip', fingerprint: true, onlyIfSuccessful: true
+				echo '------------'
+                echo '  SUCCESS!'
+				echo '------------'
         }
     }
 }
