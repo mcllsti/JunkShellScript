@@ -67,7 +67,7 @@ BUGS
 AUTHOR
        Written	by  Daryl  McAllister  (dmcall200@caledonia.ac.uk)  1/10/17  -
        30/10/17: Free Usage.
-
+	   Updated 15/07/19
 
 
 1.0				  20/10/2017				man(1)

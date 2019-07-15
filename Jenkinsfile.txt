@@ -1,22 +1,43 @@
 pipeline {
     agent any
-
+ 
+    options { 
+        disableConcurrentBuilds() 
+    }
+ 
+    triggers {
+        pollSCM('H * * * *')
+    }
+ 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+				echo '-----------'
+                echo 'Building...'
+				echo '-----------'
             }
         }
-        stage('Test') {
+		
+		stage('Test') {
             steps {
-				powershell label: '', script: 'help get-help -examples'
-				powershell label: '', script: 'help get-services -examples'
+                echo '----------'
+                echo 'Testing...'
+				echo '----------'
             }
         }
-        stage('Deploy') {
+		
+		stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo '------------'
+                echo 'Deploying...'
+				echo '------------'
             }
+        }
+    }
+ 
+    post{
+        success{
+            archiveArtifacts artifacts: 'Builds\\NANTScripts\\Target.zip', fingerprint: true, onlyIfSuccessful: true
         }
     }
 }
