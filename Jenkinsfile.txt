@@ -25,6 +25,10 @@ pipeline {
                 echo '----------'
                 echo 'Testing...'
 				echo '----------'
+				
+				catchError(buildResult: 'SUCCESS', message: 'This is a test error', stageResult: 'FAILURE') {
+    // some block
+}
             }
         }
 		
