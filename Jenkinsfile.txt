@@ -9,10 +9,7 @@ pipeline {
         pollSCM('H * * * *')
     }
 
-	environment{
-	failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
-	}
-	
+
  
     stages {
         stage('Build') {
@@ -31,7 +28,9 @@ pipeline {
 						
 				}
 				
-				
+				script {
+				failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
+				}
 
 				echo failure
             }
