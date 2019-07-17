@@ -15,7 +15,9 @@ pipeline {
 
                 echo 'Building...'
 
-				fileExists 'junk.sh'
+				if(fileExists 'junk.sh'){
+				echo 'File Exists'
+				}
 				
             }
         }
