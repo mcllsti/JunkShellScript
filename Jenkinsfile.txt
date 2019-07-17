@@ -8,7 +8,10 @@ pipeline {
     triggers {
         pollSCM('H * * * *')
     }
-	
+
+	environment{
+	$failure = powershell label: '', returnStatus: true, script: 'get-help get-help - examples '
+	}
 	
  
     stages {
@@ -28,8 +31,8 @@ pipeline {
 						
 				}
 				
+				
 
-				$failure = powershell label: '', returnStatus: true, script: 'get-help get-help - examples '
 				echo $failure
             }
         }
