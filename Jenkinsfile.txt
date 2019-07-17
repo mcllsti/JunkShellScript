@@ -29,7 +29,7 @@ pipeline {
 				}
 				
 				script {
-				define failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
+				def failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
 				echo failure
 				}
 
