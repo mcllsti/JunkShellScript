@@ -40,7 +40,7 @@ pipeline {
 				
 				script {
 					def failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
-					if(failure){
+					if(!failure){
 						echo 'Yes'
 					} else {
 						echo 'No'
