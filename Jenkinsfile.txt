@@ -40,10 +40,10 @@ pipeline {
 				
 				script {
 					def failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
-					if(!failure){
-						echo 'Yes'
+					if(failure){
+						error 'Shell Script Failed to Execute. Build Failed...'
 					} else {
-						echo 'No'
+						echo 'Sucessful Execution Of Shell Script. Build Sucess...'
 					}
 				}
 
