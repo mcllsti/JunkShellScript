@@ -30,7 +30,7 @@ pipeline {
 				
 				script {
 				def failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
-				echo failure.ToString()
+				echo failure.toString()
 				}
 
 				
