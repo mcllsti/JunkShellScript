@@ -16,7 +16,6 @@ pipeline {
                 echo 'Building...'
 				echo '-----------'
 				
-				error 'Error Here'
 				
             }
         }
@@ -34,6 +33,8 @@ pipeline {
                 echo '------------'
                 echo 'Deploying...'
 				echo '------------'
+				
+				sleep 1
 			}
         }
     }
