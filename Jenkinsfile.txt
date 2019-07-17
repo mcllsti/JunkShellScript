@@ -28,7 +28,7 @@ pipeline {
 						
 				}
 				
-				sh junk.sh
+				sh label: '', script: 'sh junk.sh'
 
 				
             }
