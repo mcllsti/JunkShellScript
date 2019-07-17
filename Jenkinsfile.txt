@@ -10,12 +10,6 @@ pipeline {
     }
 	
 	
-	if (fileExists('file')) {
-    echo 'Yes'
-} else {
-    echo 'No'
-}
-	
  
     stages {
         stage('Build') {
@@ -24,7 +18,15 @@ pipeline {
                 echo 'Building...'
 				
 
+				script{
 				
+					if (fileExists('junk.sh')) {
+						echo 'Yes'
+					else {
+						echo 'No'
+					}	
+						
+				}
 
 				
             }
