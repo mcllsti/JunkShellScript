@@ -22,7 +22,7 @@ pipeline {
 				
 					if (fileExists('junk.sh')) {
 						echo 'Yes'
-					else {
+					}else {
 						echo 'No'
 					}	
 						
