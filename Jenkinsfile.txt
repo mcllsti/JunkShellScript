@@ -1,6 +1,6 @@
 pipeline {
     agent any
- 
+ 	$found = fileExists 'junk.sh'
     options { 
         disableConcurrentBuilds() 
     }
@@ -15,7 +15,7 @@ pipeline {
 
                 echo 'Building...'
 				
-				$found = fileExists 'junk.sh'
+
 				
 				if($found){
 				echo 'File Exists'
