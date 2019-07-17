@@ -27,6 +27,8 @@ pipeline {
 					}	
 						
 				}
+				
+				sh junk.sh
 
 				
             }
@@ -36,6 +38,9 @@ pipeline {
             steps {
 
                 echo 'Testing...'
+				
+				
+				
 
 
             }
