@@ -10,7 +10,7 @@ pipeline {
     }
 
 	environment{
-	$failure = powershell label: '', returnStatus: true, script: 'get-help get-help - examples '
+	$_failure = powershell label: '', returnStatus: true, script: 'get-help get-help - examples '
 	}
 	
  
@@ -33,7 +33,7 @@ pipeline {
 				
 				
 
-				echo $failure
+				echo $_failure
             }
         }
 		
