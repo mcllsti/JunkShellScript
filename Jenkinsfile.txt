@@ -14,8 +14,10 @@ pipeline {
             steps {
 
                 echo 'Building...'
-
-				if(fileExists 'junk.sh'){
+				
+				$found = fileExists 'junk.sh'
+				
+				if($found){
 				echo 'File Exists'
 				}
 				
