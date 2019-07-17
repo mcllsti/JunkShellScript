@@ -39,14 +39,13 @@ pipeline {
 				
 				
 				script {
-					def failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
+					def failure = powershell label: '', returnStatus: true, script: 'get-he8lp get-he8lp -examples '
 					if(failure){
 						error 'Shell Script Failed to Execute. Build Failed...'
 					} else {
-						echo 'Sucessful Execution Of Shell Script. Build Sucess...'
+						echo 'Successful Execution Of Shell Script. Build Sucess...'
 					}
 				}
-
 
             }
         }
