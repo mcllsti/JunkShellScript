@@ -28,8 +28,8 @@ pipeline {
 						
 				}
 				
-				sh label: '', script: 'sh junk.sh'
 
+				powershell label: '', returnStatus: true, script: 'get-help get-help - examples '
 				
             }
         }
