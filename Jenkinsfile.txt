@@ -55,17 +55,16 @@ pipeline {
 
                 echo 'Deploying...'
 
-				
-
 			}
         }
     }
  
     post{
         success{
-
-                echo '  SUCCESS!'
-
+			//Do Success
         }
+		Failed{
+			//Do Failed
+		}
     }
 }
