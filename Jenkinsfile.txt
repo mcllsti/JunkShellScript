@@ -10,7 +10,7 @@ pipeline {
     }
 
 	environment{
-	failure = powershell label: '', returnStatus: true, script: 'get-help get-help - examples '
+	failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
 	}
 	
  
