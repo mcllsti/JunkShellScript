@@ -8,6 +8,14 @@ pipeline {
     triggers {
         pollSCM('H * * * *')
     }
+	
+	
+	if (fileExists('file')) {
+    echo 'Yes'
+} else {
+    echo 'No'
+}
+	
  
     stages {
         stage('Build') {
@@ -17,11 +25,7 @@ pipeline {
 				
 
 				
-if (fileExists('file')) {
-    echo 'Yes'
-} else {
-    echo 'No'
-}
+
 				
             }
         }
