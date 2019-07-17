@@ -28,11 +28,6 @@ pipeline {
 						
 				}
 				
-				script {
-				def failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
-				echo failure.toString()
-				}
-
 				
             }
         }
@@ -43,7 +38,14 @@ pipeline {
                 echo 'Testing...'
 				
 				
-				
+				script {
+					def failure = powershell label: '', returnStatus: true, script: 'get-help get-help -examples '
+					if(failure){
+						echo 'Yes'
+					} else {
+						echo 'No'
+					}
+				}
 
 
             }
