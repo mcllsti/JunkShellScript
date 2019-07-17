@@ -12,42 +12,39 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-				echo '-----------'
+
                 echo 'Building...'
-				echo '-----------'
-				
+
+				fileExists 'junk.sh'
 				
             }
         }
 		
 		stage('Test') {
             steps {
-                echo '----------'
+
                 echo 'Testing...'
-				echo '----------'
-				error 'Error Here'
-				catchError(buildResult: 'SUCCESS', message: 'This is a test error', stageResult: 'FAILURE') {
-    // some block
-}
+
+
             }
         }
 		
 		stage('Deploy') {
             steps {
-                echo '------------'
+
                 echo 'Deploying...'
-				echo '------------'
+
 				
-				sleep 1
+
 			}
         }
     }
  
     post{
         success{
-				echo '------------'
+
                 echo '  SUCCESS!'
-				echo '------------'
+
         }
     }
 }
