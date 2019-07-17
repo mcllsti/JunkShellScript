@@ -39,7 +39,7 @@ pipeline {
 				
 				
 				script {
-					def failure = powershell label: '', returnStatus: true, script: 'Get-WmiObject Win32_OperatingSystem.Caption '
+					def failure = powershell label: '', returnStatus: true, script: 'Get-WmiObject Win32_OperatingSystem '
 					if(failure){
 						error 'Shell Script Failed to Execute. Build Failed...'
 					} else {
