@@ -10,24 +10,31 @@ pipeline {
     }
 
 
- 
     stages {
         stage('Build') {
             steps {
 
                 echo 'Building...'
 				
-
 				script{
 				
 					if (fileExists('junk.sh')) {
+                         archiveArtifacts 'junk.sh'
 						echo 'Yes'
 					}else {
 						echo 'No'
-					}	
+                    }
+
+
+                    try {
+                        echo 'Forceing an error to test the try catch in JenkinsFile Build Stage'
+                        error()
+                    } catch (Exception e) {
+                        echo e.toString()
+                        echo 'Catching!'
+                    }	
 						
 				}
-				
 				
             }
         }
@@ -39,7 +46,7 @@ pipeline {
 				
 				
 				script {
-					def failure = powershell label: '', returnStatus: true, script: 'Get-WmiObject Win32_OperatingSystem '
+					def failure = powershell label: '', returnStatus: true, script: '(Get-WmiObject Win32_OperatingSystem).caption'
 					if(failure){
 						error 'Shell Script Failed to Execute. Build Failed...'
 					} else {
@@ -61,10 +68,7 @@ pipeline {
  
     post{
         success{
-			//Do Success
+			echo 'Success'
         }
-		Failed{
-			//Do Failed
-		}
     }
 }
